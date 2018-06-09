@@ -12,6 +12,7 @@ from pathlib import Path
 
 from dao import storage_agent
 from api import sub_record
+from utils import app_logger
 
 
 class FileAgent(storage_agent.StorageAgent):
@@ -20,6 +21,9 @@ class FileAgent(storage_agent.StorageAgent):
     __default_data_store_path__ = "../data_store/store.json"
 
     def __init__(self):
+
+        self.logger = app_logger.AppLogger().get_logger()
+
         storage_agent.StorageAgent.__init__(self)
         self.data_store_path = FileAgent.__default_data_store_path__
         self.json_data = {}
@@ -32,11 +36,14 @@ class FileAgent(storage_agent.StorageAgent):
             with open(self.data_store_path, "w") as store:
                 json.dump(self.json_data, store)
 
+            self.logger.info("Initialized empty store file")
+
     """
     Function sets custom data store path, overriding the default.
     """
     def set_data_store_path(self, path):
         self.data_store_path = path
+        self.logger.info("Setting the store file path to {0}", path)
 
     """
     Function that adds subscription record
@@ -45,18 +52,21 @@ class FileAgent(storage_agent.StorageAgent):
         with open(self.data_store_path, "r") as json_store:
             # FIXME: Try to use streams instead of loading whole json in memory.
             self.json_data = json.load(json_store)
+            self.logger.info("Loaded the current stored data")
 
         user_id = record.get_user_id()
         city = record.get_city()
 
         if not user_id in self.json_data:
             self.json_data[user_id] = [city]
+            self.logger.info("Subscribed new user with id")
         else:
             city_list = self.json_data[user_id]
             if not city in city_list:
                 city_list.append(city)
+                self.logger.info("Added city subscription for {0} to existing user")
 
-        print(self.json_data)
+        # print(self.json_data)
         with open(self.data_store_path, "w") as json_store:
             json.dump(self.json_data, json_store)
 
@@ -68,6 +78,7 @@ class FileAgent(storage_agent.StorageAgent):
             # FIXME: Try to use streams instead of loading whole json in memory.
             self.json_data = json.load(json_store)
 
+            self.logger.info("Retrieved existing data dump")
             return self.json_data
 
 
