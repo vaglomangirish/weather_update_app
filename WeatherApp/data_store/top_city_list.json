@@ -1,9 +1,11 @@
 {
-  "New York,NY" : 70,
-  "Chicago,IL" : 65,
-  "Anchorage,AK" : 70,
-  "Austin,TX" : 75,
-  "Boston,MA" : 65,
-  "Seatle,WA" : 60,
-  "Washington,DC": 65
+ "cities" :[
+  "New York,NY",
+  "Chicago,IL",
+  "Anchorage,AK",
+  "Austin,TX",
+  "Boston,MA",
+  "Seatle,WA",
+  "Washington,DC"
+  ]
 }

@@ -1,6 +1,6 @@
 import json
 
-from api import weather_agent
+from service import weather_agent
 
 
 class TestWeatherAgent:
@@ -20,12 +20,22 @@ class TestWeatherAgent:
     def __init__(self):
         pass
 
-    def test_send_email(self):
+    def test_get_weather_by_city(self):
         """
         Test to get weather.
         """
 
         agent = weather_agent.WeatherAgent()
-        #weather_json = agent.get_weather_by_city("Boston,MA")
+        # weather_json = agent.get_weather_by_city("Boston,MA")
 
-        #assert weather_json["data"][0]["temp"] is not None
+        # assert weather_json["data"][0]["temp"] is not None
+
+    def test_get_avg_temp_for_city(self):
+        """
+        Test to get weather.
+        """
+
+        agent = weather_agent.WeatherAgent()
+        # avg_temp = agent.get_avg_temp_for_city("Seatle,WA")
+
+        # assert avg_temp is not None

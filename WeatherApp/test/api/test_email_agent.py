@@ -1,6 +1,6 @@
 import json
 
-from api import email_agent, email_content
+from service import email_agent, email_content
 
 
 class TestEmailAgent:
@@ -27,7 +27,7 @@ class TestEmailAgent:
 
         from_id = "funday@weatherapp.com"
         from_name = "FunDay Weather App"
-        to_id = "dummy@email.com"
+        to_id = "vaglomangirish@gmail.com"
         subject = "Test Email"
         html_content = "<p>This is a test email.</p>"
 
@@ -41,4 +41,6 @@ class TestEmailAgent:
         agent = email_agent.EmailAgent()
         #response = agent.send_email(content)
 
-        #assert response.status_code == 200
+        #resp_json = json.loads(response.content)
+
+        #assert resp_json["success"] == True
