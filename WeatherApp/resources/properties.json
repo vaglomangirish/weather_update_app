@@ -4,5 +4,8 @@
   "elasticmail_api_key" : "a457e485-eb04-4824-96c1-15074f1a037f",
   "email_send_api_url" : "https://api.elasticemail.com/v2/email/send",
   "email_from_id" : "np-reply@fundayweatherapp.io",
-  "email_from_name" : "Fun Day Weather App"
+  "email_from_name" : "Fun Day Weather App",
+  "nice_weather_image_link" : "https://image.freepik.com/free-vector/smiling-sun-background_23-2147664511.jpg",
+  "bad_weather_image_link" : "http://clearlymagazine.com/images/story_images/Life_and_Health/Cloudy-Day-ebook.jpg",
+  "avg_weather_image_link" : "https://media.giphy.com/media/3o7aD3sy6KxUdBQ85q/giphy.gif"
 }

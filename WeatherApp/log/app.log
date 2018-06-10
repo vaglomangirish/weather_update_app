@@ -1,42 +1,22 @@
-2018-06-09 20:53:24,797 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 20:53:24,797 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 20:53:24,797 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 20:53:24,797 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 20:53:24,797 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 20:53:24,798 - AppLogger - INFO - Retrieved existing data dump
-2018-06-09 20:53:24,798 - AppLogger - INFO - Retrieved existing data dump
-2018-06-09 21:06:24,558 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 21:06:24,559 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 21:06:24,559 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 21:06:24,560 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 21:06:24,560 - AppLogger - INFO - Loaded the current stored data
-2018-06-09 21:06:24,560 - AppLogger - INFO - Retrieved existing data dump
-2018-06-09 21:06:24,560 - AppLogger - INFO - Retrieved existing data dump
-2018-06-10 01:08:14,330 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:14,330 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:14,330 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:14,330 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:14,330 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:14,330 - AppLogger - INFO - Retrieved existing data dump
-2018-06-10 01:08:14,330 - AppLogger - INFO - Retrieved existing data dump
-2018-06-10 01:08:28,642 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:28,642 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:28,642 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:28,643 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:28,643 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:28,643 - AppLogger - INFO - Retrieved existing data dump
-2018-06-10 01:08:28,643 - AppLogger - INFO - Retrieved existing data dump
-2018-06-10 01:08:50,635 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:50,636 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:50,636 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:50,636 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:50,636 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:08:50,637 - AppLogger - INFO - Retrieved existing data dump
-2018-06-10 01:08:50,637 - AppLogger - INFO - Retrieved existing data dump
-2018-06-10 01:09:18,431 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:09:18,431 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:09:18,431 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:09:18,432 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:09:18,432 - AppLogger - INFO - Loaded the current stored data
-2018-06-10 01:09:18,432 - AppLogger - INFO - Retrieved existing data dump
-2018-06-10 01:09:18,432 - AppLogger - INFO - Retrieved existing data dump
+2018-06-10 13:43:48,959 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city New York,NY
+2018-06-10 13:43:49,618 - AppLogger - INFO - Email sent to mangirish@abc.com for city Cambridge,MA
+2018-06-10 13:43:50,318 - AppLogger - INFO - Email sent to mangirish@abc.com for city Chicago,IL
+2018-06-10 13:46:35,618 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city New York,NY
+2018-06-10 13:51:17,295 - AppLogger - INFO - City: New York,NY Current Temperature: 21 Average Temperature: 23.656
+2018-06-10 13:51:17,295 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city New York,NY
+2018-06-10 13:52:45,122 - AppLogger - INFO - City: New York,NY Current Temperature: 21 Average Temperature: 23.656
+2018-06-10 13:52:45,527 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city New York,NY
+2018-06-10 14:16:03,595 - AppLogger - INFO - City: New York,NY Current Temperature: 21 Average Temperature: 23.656
+2018-06-10 14:16:04,175 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city New York,NY
+2018-06-10 14:17:21,821 - AppLogger - INFO - City: New York,NY Current Temperature: 21 Average Temperature: 23.656
+2018-06-10 14:17:22,226 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city New York,NY
+2018-06-10 14:17:22,518 - AppLogger - INFO - City: Austin,TX Current Temperature: 31.1 Average Temperature: 28.992
+2018-06-10 14:17:22,919 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city Austin,TX
+2018-06-10 14:17:23,845 - AppLogger - INFO - City: San Diego,CA Current Temperature: 21 Average Temperature: 20
+2018-06-10 14:17:24,244 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city San Diego,CA
+2018-06-10 14:24:31,356 - AppLogger - INFO - City: New York,NY Current Temperature: 21 Average Temperature: 23.656
+2018-06-10 14:24:31,763 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city New York,NY
+2018-06-10 14:24:32,000 - AppLogger - INFO - City: Austin,TX Current Temperature: 31.1 Average Temperature: 28.992
+2018-06-10 14:24:32,403 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city Austin,TX
+2018-06-10 14:24:33,017 - AppLogger - INFO - City: San Diego,CA Current Temperature: 21 Average Temperature: 20
+2018-06-10 14:24:33,422 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city San Diego,CA

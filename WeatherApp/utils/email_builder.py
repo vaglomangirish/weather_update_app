@@ -13,8 +13,8 @@ class EmailBuilder:
     __not_nice_weather_subject__ = "Not so nice out? That's okay, enjoy a discount on us."
     __avg_weather_subject__ = "Enjoy a discount on us."
 
-    __bad_weather_keywords__ = ["rain", "snow", "storm", "sleet"]
-    __good_weather_keywords__ = ["sunny"]
+    __bad_weather_keywords__ = ["rain", "snow", "storm", "sleet", "cold"]
+    __good_weather_keywords__ = ["sunny", "clear sk", "warm"]
 
     def __init__(self):
         self.properties = {}
@@ -44,22 +44,30 @@ class EmailBuilder:
 
         # Subject
         good_weather = False
+        # Image link
+        image_link = self.properties["avg_weather_image_link"]
 
         for weather in EmailBuilder.__good_weather_keywords__:
-            good_weather = weather in description
+            good_weather = weather in str(description).lower()
+            if good_weather:
+                break
 
-        # If description is positive and temperature 5 deg. warmer, set nice weather subject.
+        # If description is positive and temperature 5 deg. warmer, set nice weather subject and image.
         if good_weather or (current_temp - avg_temp) >= 5.0:
             email_cont.subject = EmailBuilder.__nice_weather_subject__
+            image_link = self.properties["nice_weather_image_link"]
         else:
             bad_weather = False
 
             for weather in EmailBuilder.__bad_weather_keywords__:
                 bad_weather = weather in description
+                if bad_weather:
+                    break
 
-            # If description is negative and temperature 5 deg. cooler, set not nice weather subject.
+            # If description is negative and temperature 5 deg. cooler, set not nice weather subject and image.
             if bad_weather or (avg_temp - current_temp) >= 5.0:
                 email_cont.subject = EmailBuilder.__not_nice_weather_subject__
+                image_link = self.properties["bad_weather_image_link"]
             else:
                 # Set average weather subject otherwise.
                 email_cont.subject = EmailBuilder.__avg_weather_subject__
@@ -68,8 +76,9 @@ class EmailBuilder:
         html_content = "<html>" \
             "<head><h2>Weather for " + city + "</h2></head>" \
             "<body>" \
-            "<img src=\"http://www.clker.com/cliparts/I/X/3/J/K/a/sunny-weather-ed-md.png\" />" \
-            "<p>Weather : " + description + " </p><p>Temperature : " + current_temp + "</p>" \
+            "<h3><p>Weather : " + str(description) + " </p><p>Temperature : " + str(current_temp) \
+                       + " Degrees Celcius </p></h3>" \
+            "<img src=\"" + str(image_link) + "\" width=\"30%\" height=\"30%\" />" \
             "</body>" \
             "</html>"
 
