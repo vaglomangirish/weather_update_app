@@ -2,7 +2,7 @@
 Logger handler class for the application
 """
 
-import logging
+import logging, __root_path__
 
 
 class AppLogger:
@@ -12,7 +12,7 @@ class AppLogger:
         self.logger.setLevel(logging.DEBUG)
 
         # Create file handler
-        file_handler = logging.FileHandler("../log/app.log")
+        file_handler = logging.FileHandler(__root_path__.path() + "/log/app.log")
         file_handler.setLevel(logging.DEBUG)
 
         # create console handler

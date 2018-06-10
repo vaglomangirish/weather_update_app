@@ -6,19 +6,19 @@ This agent would store the subscription record in form of a json:-
 {<userid> : [<List of subscribed cities>]}
 
 """
+import __root_path__
 import json
 
 from pathlib import Path
 
-from dao import storage_agent
-from api import sub_record
+from dao import storage_agent, sub_record
 from utils import app_logger
 
 
 class FileAgent(storage_agent.StorageAgent):
 
     # Default static path to the file storing the subscription records
-    __default_data_store_path__ = "../data_store/store.json"
+    __default_data_store_path__ = __root_path__.path() + "/data_store/store.json"
 
     def __init__(self):
 
