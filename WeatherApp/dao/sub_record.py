@@ -1,10 +1,7 @@
-"""
-
-Class for Subscription record
-
-"""
-
 class SubscriptionRecord:
+    """
+    Class for Subscription record
+    """
 
     def __init__(self, user_id, city):
         self.user_id = user_id

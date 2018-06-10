@@ -1,15 +1,3 @@
-"""
-Test class for email agent.
-
-run with
-
-nosetests -v --nocapture test_email_agent.py
-
-or
-
-nosetests -v test_email_agent.py
-
-"""
 import json
 
 from api import email_agent, email_content
@@ -17,7 +5,16 @@ from api import email_agent, email_content
 
 class TestEmailAgent:
     """
-    This class tests the email agent
+    Test class for email agent.
+
+    run with
+
+    nosetests -v --nocapture test_email_agent.py
+
+    or
+
+    nosetests -v test_email_agent.py
+
     """
 
     def test_send_email(self):

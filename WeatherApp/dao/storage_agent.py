@@ -1,10 +1,7 @@
-"""
-
-Interface class for Storage Agent
-
-"""
-
 class StorageAgent:
+    """
+    Interface class for Storage Agent
+    """
 
     def __init__(self):
         pass

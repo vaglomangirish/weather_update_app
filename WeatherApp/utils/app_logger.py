@@ -1,11 +1,10 @@
-"""
-Logger handler class for the application
-"""
-
 import logging, __root_path__
 
 
 class AppLogger:
+    """
+    Logger handler class for the application
+    """
 
     def __init__(self):
         self.logger = logging.getLogger('AppLogger')

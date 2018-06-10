@@ -1,16 +1,3 @@
-"""
-Test class for file agent.
-
-run with
-
-nosetests -v --nocapture test_file_agent.py
-
-or
-
-nosetests -v test_file_agent.py
-
-"""
-
 import os
 
 from dao import file_agent, sub_record
@@ -18,7 +5,16 @@ from dao import file_agent, sub_record
 
 class TestFileAgent:
     """
-    This class tests the email agent
+    Test class for file agent.
+
+    run with
+
+    nosetests -v --nocapture test_file_agent.py
+
+    or
+
+    nosetests -v test_file_agent.py
+
     """
 
     def test_add_record(self):

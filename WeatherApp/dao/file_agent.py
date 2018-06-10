@@ -1,11 +1,3 @@
-"""
-File implementation of Storage Agent.
-
-This agent would store the subscription record in form of a json:-
-
-{<userid> : [<List of subscribed cities>]}
-
-"""
 import __root_path__
 import json
 
@@ -16,6 +8,14 @@ from utils import app_logger
 
 
 class FileAgent(storage_agent.StorageAgent):
+    """
+    File implementation of Storage Agent.
+
+    This agent would store the subscription record in form of a json:-
+
+    {<userid> : [<List of subscribed cities>]}
+
+    """
 
     # Default static path to the file storing the subscription records
     __default_data_store_path__ = __root_path__.path() + "/data_store/store.json"
@@ -50,7 +50,7 @@ class FileAgent(storage_agent.StorageAgent):
         Function that adds subscription record
         """
         with open(self.data_store_path, "r") as json_store:
-            # FIXME: Try to use streams instead of loading whole json in memory.
+            # FIXME: Performance perspective try to use streams instead of loading whole json in memory every time.
             self.json_data = json.load(json_store)
             self.logger.info("Loaded the current stored data")
 
@@ -64,7 +64,7 @@ class FileAgent(storage_agent.StorageAgent):
             city_list = self.json_data[user_id]
             if not city in city_list:
                 city_list.append(city)
-                self.logger.info("Added city subscription for {0} to existing user")
+                self.logger.info("Added city subscription to existing user")
 
         # print(self.json_data)
         with open(self.data_store_path, "w") as json_store:

@@ -1,15 +1,3 @@
-"""
-Test class for email agent.
-
-run with
-
-nosetests -v --nocapture test_weather_agent.py
-
-or
-
-nosetests -v test_weather_agent.py
-
-"""
 import json
 
 from api import weather_agent
@@ -17,7 +5,16 @@ from api import weather_agent
 
 class TestWeatherAgent:
     """
-    This class tests the weather agent
+    Test class for email agent.
+
+    run with
+
+    nosetests -v --nocapture test_weather_agent.py
+
+    or
+
+    nosetests -v test_weather_agent.py
+
     """
 
     def test_send_email(self):

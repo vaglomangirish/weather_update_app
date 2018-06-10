@@ -1,8 +1,7 @@
-"""
-Class that encapsulates email content
-"""
-
 class EmailContent:
+    """
+    Class that encapsulates email content
+    """
 
     def __init__(self):
         self.from_id = ""
