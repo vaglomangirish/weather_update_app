@@ -1,6 +1,5 @@
-import json
-
 from flask import Flask, abort, request
+from validate_email import validate_email
 
 from data_access import file_agent, sub_record
 
@@ -18,13 +17,21 @@ def subscribe_weather():
     }
     :return:
     """
+    # Request with no json is bad.
     if not request.json:
         abort(400)
     data_json = request.json
+
+    # Request with either email or city not present is bad.
     if "email" not in data_json or "city" not in data_json:
         abort(400)
 
     email = data_json["email"]
+
+    # Request with invalid email is bad.
+    if not validate_email(email):
+        abort(400)
+
     city = data_json["city"]
 
     record = sub_record.SubscriptionRecord(email, city)
