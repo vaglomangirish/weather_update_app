@@ -17,6 +17,9 @@ class TestWeatherAgent:
 
     """
 
+    def __init__(self):
+        pass
+
     def test_send_email(self):
         """
         Test to get weather.

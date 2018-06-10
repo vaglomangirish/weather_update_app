@@ -17,6 +17,9 @@ class TestFileAgent:
 
     """
 
+    def __init__(self):
+        pass
+
     def test_add_record(self):
         """
         Test to send an email.
@@ -31,7 +34,6 @@ class TestFileAgent:
         agent.add_record(record)
 
         assert os.path.isfile(agent.data_store_path)
-
 
     def test_get_records(self):
         """
