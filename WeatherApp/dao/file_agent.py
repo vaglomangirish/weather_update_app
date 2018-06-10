@@ -80,21 +80,3 @@ class FileAgent(storage_agent.StorageAgent):
 
             self.logger.info("Retrieved existing data dump")
             return self.json_data
-
-
-# Main for Test purpose only
-def main():
-    agent = FileAgent()
-    record = sub_record.SubscriptionRecord("mangirish@abc.com", "Cambridge MA")
-    agent.add_record(record)
-    record = sub_record.SubscriptionRecord("mangirish@abc.com", "Chicago IL")
-    agent.add_record(record)
-    record = sub_record.SubscriptionRecord("vaglo@abc.com", "New York NY")
-    agent.add_record(record)
-
-
-if __name__ == "__main__":
-    main()
-
-
-
