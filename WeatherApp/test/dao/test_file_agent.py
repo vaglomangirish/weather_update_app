@@ -22,7 +22,7 @@ class TestFileAgent:
 
     def test_add_record(self):
         """
-        Test to send an email.
+        Test to add record to store.
         """
 
         agent = file_agent.FileAgent()
@@ -37,7 +37,7 @@ class TestFileAgent:
 
     def test_get_records(self):
         """
-        Test get records.
+        Test get records from store.
         """
         agent = file_agent.FileAgent()
 

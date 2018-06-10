@@ -32,7 +32,7 @@ class TestWeatherAgent:
 
     def test_get_avg_temp_for_city(self):
         """
-        Test to get weather.
+        Test to get averate temp.
         """
 
         agent = weather_agent.WeatherAgent()
