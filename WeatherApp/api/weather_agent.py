@@ -1,13 +1,13 @@
 """
 Class for get operations on weather based on city.
 """
-import json, logging
+import json, __root_path__
 
 from weatherbit.api import Api
 
 class WeatherAgent:
 
-    __props_path__ = "../resources/properties.json"
+    __props_path__ = __root_path__.path() + "/resources/properties.json"
 
     def __init__(self):
         self.properties = {}
@@ -20,7 +20,7 @@ class WeatherAgent:
         weather_api = Api(self.weatherbit_key)
 
         current = weather_api.get_current(city=city)
-        print(current.json)
+        #print(current.json)
 
         return current.json
 

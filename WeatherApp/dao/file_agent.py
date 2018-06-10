@@ -38,17 +38,17 @@ class FileAgent(storage_agent.StorageAgent):
 
             self.logger.info("Initialized empty store file")
 
-    """
-    Function sets custom data store path, overriding the default.
-    """
     def set_data_store_path(self, path):
+        """
+        Function sets custom data store path, overriding the default.
+        """
         self.data_store_path = path
         self.logger.info("Setting the store file path to {0}", path)
 
-    """
-    Function that adds subscription record
-    """
     def add_record(self, record):
+        """
+        Function that adds subscription record
+        """
         with open(self.data_store_path, "r") as json_store:
             # FIXME: Try to use streams instead of loading whole json in memory.
             self.json_data = json.load(json_store)
@@ -70,10 +70,10 @@ class FileAgent(storage_agent.StorageAgent):
         with open(self.data_store_path, "w") as json_store:
             json.dump(self.json_data, json_store)
 
-    """
-    Function to retrieve subscription records stream
-    """
     def get_records(self):
+        """
+        Function to retrieve subscription records stream
+        """
         with open(self.data_store_path, "r") as json_store:
             # FIXME: Try to use streams instead of loading whole json in memory.
             self.json_data = json.load(json_store)

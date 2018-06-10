@@ -15,9 +15,9 @@ import json
 from api import email_agent, email_content
 
 
-class test_email_agent:
+class TestEmailAgent:
     """
-        This class tests the email agent
+    This class tests the email agent
     """
 
     def test_send_email(self):
