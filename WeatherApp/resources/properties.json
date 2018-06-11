@@ -7,5 +7,6 @@
   "email_from_name" : "Fun Day Weather App",
   "nice_weather_image_link" : "https://image.freepik.com/free-vector/smiling-sun-background_23-2147664511.jpg",
   "bad_weather_image_link" : "http://clearlymagazine.com/images/story_images/Life_and_Health/Cloudy-Day-ebook.jpg",
-  "avg_weather_image_link" : "https://media.giphy.com/media/3o7aD3sy6KxUdBQ85q/giphy.gif"
+  "avg_weather_image_link" : "https://media.giphy.com/media/3o7aD3sy6KxUdBQ85q/giphy.gif",
+  "http_server_port" : 8000
 }

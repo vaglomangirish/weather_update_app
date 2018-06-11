@@ -9,23 +9,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function(){
+
+        // Handling form submit.
         $( "#subscribe" ).submit(function( event ) {
 
-            //Prevent default functionality
+            //Prevent default functionality.
             event.preventDefault();
 
+            // Calling the subscribe API.
             $.ajax({
                 url: '/funday/subscribe',
                 type: 'post',
                 dataType: 'application/json',
                 data: $("#subscribe").serialize(),
                 statusCode: {
+                    // SUCCESS
                     200: function() {
                         $("#msg").append('<div class="alert alert-success alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>SUCCESS</strong> ' + $("#email").val() + ' subscribed to ' + $("#city").val() + ' </div>');
                     },
+                    // BAD REQUEST
                     400: function() {
                         $("#msg").append('<div class="alert alert-danger alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Did you provide valid info?</strong> Something wrong with the data.</div>');
                     },
+                    // SERVER ERROR
                     500: function() {
                         $("#msg").append('<div class="alert alert-danger alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Server isn\'t feeling well!</strong> Please try again in sometime.</div>');
                     }
@@ -33,11 +39,15 @@
             });
         });
 
+        // Loading the Cities List in the drop down.
         $.get("/funday/getcities", function(obj) {
             console.log(obj);
             $.each(obj.cities, function(value) {
                 $("#city").append("<option>" + obj.cities[value] + "</option>");
             });
+        })
+        .fail(function() {
+            $("#msg").append('<div class="alert alert-danger alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Could not load cities list</strong> Please try again in sometime.</div>');
         });
 
     });
