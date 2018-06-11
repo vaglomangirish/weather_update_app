@@ -10,20 +10,26 @@
     <script>
     $(document).ready(function(){
         $( "#subscribe" ).submit(function( event ) {
-          $.ajax({
-            url: '/funday/subscribe',
-            type: 'post',
-            dataType: 'application/json',
-            data: $("#subscribe").serialize(),
-             statusCode: {
-                200: function() {
-                  alert( "Success" );
-                },
-                400: function() {
-                  alert( "Bad Request" );
+            //prevent Default functionality
+            event.preventDefault();
+
+            $.ajax({
+                url: '/funday/subscribe',
+                type: 'post',
+                dataType: 'application/json',
+                data: $("#subscribe").serialize(),
+                statusCode: {
+                    200: function() {
+                        alert( "Success" );
+                    },
+                    400: function() {
+                        alert( "Bad Request" );
+                    },
+                    500: function() {
+                        alert( "Server Error" );
+                    }
                 }
-             }
-          });
+            });
         });
     });
     </script>
