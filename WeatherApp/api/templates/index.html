@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Subscribe Fun Day</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $( "#subscribe" ).submit(function( event ) {
+          $.ajax({
+            url: '/funday/subscribe',
+            type: 'post',
+            dataType: 'application/json',
+            data: $("#subscribe").serialize(),
+             statusCode: {
+                200: function() {
+                  alert( "Success" );
+                },
+                400: function() {
+                  alert( "Bad Request" );
+                }
+             }
+          });
+        });
+    });
+    </script>
+</head>
+<body>
+
+<div class="container">
+  <h2 style="color:#069">Fun Day Weather Email Service</h2>
+  <form id="subscribe">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <select class="form-control" id="city" name="city">
+      	<option>--SELECT--</option>
+        <option>Cambridge,MA</option>
+        <option>New York,NY</option>
+        <option>Chicago,IL</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default">Subscribe</button>
+  </form>
+</div>
+
+</body>
+</html>
