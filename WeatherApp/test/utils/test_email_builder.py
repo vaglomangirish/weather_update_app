@@ -1,4 +1,4 @@
-from utils import email_builder
+from src.utils import email_builder
 
 
 class TestEmailBuilder:

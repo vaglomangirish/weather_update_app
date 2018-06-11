@@ -1,15 +1,15 @@
-import json, __root_path__
-
 import datetime
+import json, os
 
 from weatherbit.api import Api
+
 
 class WeatherAgent:
     """
     Class for get operations on weather based on city.
     """
 
-    __props_path__ = __root_path__.path() + "/resources/properties.json"
+    __props_path__ = os.path.join("resources", "properties.json")
 
     def __init__(self):
         self.properties = {}

@@ -1,6 +1,4 @@
-import json
-
-from service import weather_agent
+from src.service import weather_agent
 
 
 class TestWeatherAgent:

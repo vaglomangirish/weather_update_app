@@ -1,4 +1,4 @@
-import logging, __root_path__
+import logging
 
 
 class AppLogger:

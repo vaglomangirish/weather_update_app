@@ -1,4 +1,4 @@
-import json, __root_path__
+import json, os
 
 from service import email_content
 
@@ -7,7 +7,7 @@ class EmailBuilder:
     """
     Class that holds methods to build email content.
     """
-    __props_path__ = __root_path__.path() + "/resources/properties.json"
+    __props_path__ = os.path.join("resources","properties.json")
 
     __nice_weather_subject__ = "It's nice out! Enjoy a discount on us."
     __not_nice_weather_subject__ = "Not so nice out? That's okay, enjoy a discount on us."

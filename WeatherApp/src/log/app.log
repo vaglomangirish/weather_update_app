@@ -1,0 +1,40 @@
+2018-06-11 02:10:30,019 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 02:10:30,020 - AppLogger - INFO - Subscribed user with id vaglomangirish@gmail.com and city Anaheim, CA
+2018-06-11 02:10:50,318 - AppLogger - INFO - City: Anaheim, CA Current Temperature: 20.6 Average Temperature: 21.076
+2018-06-11 02:10:50,851 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city Anaheim, CA
+2018-06-11 12:15:56,004 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:15:56,004 - AppLogger - INFO - Subscribed user with id ccc@kkk and city --SELECT--
+2018-06-11 12:21:09,984 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:21:09,984 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:21:09,984 - AppLogger - INFO - Subscribed user with id rrr@iii and city New York, NY
+2018-06-11 12:21:09,984 - AppLogger - INFO - Subscribed user with id rrr@iii and city New York, NY
+2018-06-11 12:31:36,655 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:36,655 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:36,655 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:36,655 - AppLogger - INFO - Subscribed user with id rrr@ddd.com and city Dallas, TX
+2018-06-11 12:31:36,655 - AppLogger - INFO - Subscribed user with id rrr@ddd.com and city Dallas, TX
+2018-06-11 12:31:36,655 - AppLogger - INFO - Subscribed user with id rrr@ddd.com and city Dallas, TX
+2018-06-11 12:31:44,754 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:44,754 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:44,754 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:44,754 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:44,754 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city East San Gabriel Valley, CA
+2018-06-11 12:31:44,754 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city East San Gabriel Valley, CA
+2018-06-11 12:31:44,754 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city East San Gabriel Valley, CA
+2018-06-11 12:31:44,754 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city East San Gabriel Valley, CA
+2018-06-11 12:31:49,729 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:49,729 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:49,729 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:49,729 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:49,729 - AppLogger - INFO - Loaded the current stored data
+2018-06-11 12:31:49,729 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city Indianapolis, IN
+2018-06-11 12:31:49,729 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city Indianapolis, IN
+2018-06-11 12:31:49,729 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city Indianapolis, IN
+2018-06-11 12:31:49,729 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city Indianapolis, IN
+2018-06-11 12:31:49,729 - AppLogger - INFO - Added subscription to existing user rrr@ddd.com for city Indianapolis, IN
+2018-06-11 12:32:21,853 - AppLogger - INFO - City: Dallas, TX Current Temperature: 30 Average Temperature: 30
+2018-06-11 12:32:22,271 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city Dallas, TX
+2018-06-11 12:32:22,674 - AppLogger - INFO - City: East San Gabriel Valley, CA Current Temperature: 21.7 Average Temperature: 24
+2018-06-11 12:32:23,074 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city East San Gabriel Valley, CA
+2018-06-11 12:32:23,386 - AppLogger - INFO - City: Indianapolis, IN Current Temperature: 22.2 Average Temperature: 20.28
+2018-06-11 12:32:23,792 - AppLogger - INFO - Email sent to vaglomangirish@gmail.com for city Indianapolis, IN

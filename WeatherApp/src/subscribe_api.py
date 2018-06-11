@@ -1,10 +1,12 @@
-import __root_path__, json
+import json
+import os, sys
 
+from data_access.sub_record import SubscriptionRecord
 from flask import Flask, abort, request, render_template, jsonify
+from utils.app_logger import AppLogger
 from validate_email import validate_email
 
-from data_access import file_agent, sub_record
-from utils import app_logger
+from data_access import file_agent
 
 app = Flask(__name__)
 
@@ -28,7 +30,7 @@ def subscribe_weather():
     # try:
     # Request with no form data is bad.
 
-    logger = app_logger.AppLogger().get_logger()
+    logger = AppLogger().get_logger()
 
     if not request.form:
         logger.error("No Form Data")
@@ -48,7 +50,7 @@ def subscribe_weather():
     if len(city) == 0:
         logger.error("city is empty")
 
-    record = sub_record.SubscriptionRecord(email, city)
+    record = SubscriptionRecord(email, city)
 
     agent = file_agent.FileAgent()
     agent.add_record(record)
@@ -66,11 +68,11 @@ def get_cities():
     :return:
     """
 
-    logger = app_logger.AppLogger().get_logger()
+    logger = AppLogger().get_logger()
 
     city_json = {}
     # try:
-    with open(__root_path__.path() + "/data_store/top_city_list.json", "r") as cities:
+    with open(os.path.join("data_store", "top_city_list.json"), "r") as cities:
         city_json = json.load(cities)
 
     return jsonify(city_json)
@@ -80,7 +82,7 @@ def get_cities():
 
 if __name__ == '__main__':
     #try:
-    props_path = __root_path__.path() + "/resources/properties.json"
+    props_path = os.path.join("resources","properties.json")
     properties = {}
     with open(props_path, "r") as props:
         properties = json.load(props)

@@ -1,9 +1,8 @@
-import __root_path__
-import json
+import json, os
 
 from pathlib import Path
 
-from data_access import storage_agent, sub_record
+import storage_agent
 from utils import app_logger
 
 
@@ -18,7 +17,7 @@ class FileAgent(storage_agent.StorageAgent):
     """
 
     # Default static path to the file storing the subscription records
-    __default_data_store_path__ = __root_path__.path() + "/data_store/store.json"
+    __default_data_store_path__ = os.path.join("data_store", "store.json")
 
     def __init__(self):
 
@@ -32,6 +31,7 @@ class FileAgent(storage_agent.StorageAgent):
         store_file = Path(self.data_store_path)
 
         # Initialize the data store json file if not exists.
+        self.logger.info(self.data_store_path)
         if not store_file.is_file():
             with open(self.data_store_path, "w") as store:
                 json.dump(self.json_data, store)
@@ -52,7 +52,7 @@ class FileAgent(storage_agent.StorageAgent):
         with open(self.data_store_path, "r") as json_store:
             # FIXME: Performance perspective try to use streams instead of loading whole json in memory every time.
             self.json_data = json.load(json_store)
-            self.logger.info("Loaded the current stored data")
+            self.logger.info("Loaded the current stored data xxx")
 
         user_id = record.get_user_id()
         city = record.get_city()

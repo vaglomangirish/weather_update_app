@@ -1,7 +1,7 @@
-import json, __root_path__
+import json, os
 
-from utils import email_builder, app_logger
 from service import weather_agent, email_agent
+from utils import app_logger, email_builder
 
 
 class SendWeatherEmails:
@@ -10,7 +10,7 @@ class SendWeatherEmails:
     This will be an executable python class that would be executed independently.
     """
 
-    __store_path__ = __root_path__.path() + "/data_store/store.json"
+    __store_path__ = os.path.join("data_store", "store.json")
 
     def __init__(self):
 

@@ -1,6 +1,4 @@
-import json
-
-from service import email_agent, email_content
+from src.service import email_agent, email_content
 
 
 class TestEmailAgent:

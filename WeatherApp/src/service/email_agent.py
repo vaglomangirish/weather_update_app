@@ -1,6 +1,5 @@
-import requests, json, os, sys, __root_path__
-
-from service import email_content
+import json, os
+import requests
 
 
 class EmailAgent:
@@ -8,7 +7,7 @@ class EmailAgent:
     Class that handles email sending.
     """
 
-    __props_path__ = __root_path__.path() + "/resources/properties.json"
+    __props_path__ = os.path.join("resources", "properties.json")
 
     def __init__(self):
         self.properties = {}
