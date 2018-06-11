@@ -34,10 +34,10 @@ class SendWeatherEmails:
                 description = weather_json["data"][0]["weather"]["description"]
 
                 email_cont = self.email_build.get_email_content(user_id, city, current_temp, avg_temp, description)
-                self.logger.info("City: " + city + " Current Temperature: " + str(current_temp)
-                                 + " Average Temperature: " + str(avg_temp))
+                self.logger.info("City: {0} Current Temperature: {1} Average Temperature: {2}"
+                                 .format(city, str(current_temp), str(avg_temp)))
                 self.email_agnt.send_email(email_cont)
-                self.logger.info("Email sent to " + user_id + " for city " + city)
+                self.logger.info("Email sent to {0} for city {1}".format(user_id, city))
 
 
 # Main for Test purpose only

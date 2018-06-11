@@ -43,7 +43,7 @@ class FileAgent(storage_agent.StorageAgent):
         Function sets custom data store path, overriding the default.
         """
         self.data_store_path = path
-        self.logger.info("Setting the store file path to {0}", path)
+        self.logger.info("Setting the store file path to {0}".format(path))
 
     def add_record(self, record):
         """
@@ -59,12 +59,12 @@ class FileAgent(storage_agent.StorageAgent):
 
         if not user_id in self.json_data:
             self.json_data[user_id] = [city]
-            self.logger.info("Subscribed new user with id")
+            self.logger.info("Subscribed user with id {0} and city {1}".format(user_id, city))
         else:
             city_list = self.json_data[user_id]
             if not city in city_list:
                 city_list.append(city)
-                self.logger.info("Added city subscription to existing user")
+                self.logger.info("Added subscription to existing user {0} for city {1}".format(user_id, city))
 
         # print(self.json_data)
         with open(self.data_store_path, "w") as json_store:

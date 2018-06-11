@@ -74,13 +74,16 @@ class EmailBuilder:
 
         # HTML Content
         html_content = "<html>" \
-            "<head><h2>Weather for " + city + "</h2></head>" \
+            "<head><h2>Weather for {0}</h2></head>" \
             "<body>" \
-            "<h3><p>Weather : " + str(description) + " </p><p>Temperature : " + str(current_temp) \
-                       + " Degrees Celcius </p></h3>" \
-            "<img src=\"" + str(image_link) + "\" width=\"30%\" height=\"30%\" />" \
+            "<h3>" \
+            "<p>Weather : {1} </p>" \
+            "<p>Current Temperature : {2} Degrees Celcius </p>" \
+            "<p>Average Temperature : {3} Degrees Celcius </p>" \
+            "</h3>" \
+            "<img src=\"{4}\" width=\"30%\" height=\"30%\" />" \
             "</body>" \
-            "</html>"
+            "</html>".format(city, str(description), str(current_temp), str(avg_temp), str(image_link))
 
         email_cont.set_html(html_content)
 
