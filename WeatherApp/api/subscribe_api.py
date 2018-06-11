@@ -1,6 +1,6 @@
 import __root_path__, json
 
-from flask import Flask, abort, request, render_template
+from flask import Flask, abort, request, render_template, jsonify
 from validate_email import validate_email
 
 from data_access import file_agent, sub_record
@@ -25,18 +25,18 @@ def subscribe_weather():
     """
     # Request with no form data is bad.
     if not request.form:
-        print("ERROR: No Form Data")
-        abort(400)
+         print("ERROR: No Form Data")
+         abort(400)
 
     # Request with either email or city not present is bad.
     if "email" not in request.form or "city" not in request.form:
-        print("ERROR: email or city not present in data")
-        abort(400)
+         print("ERROR: email or city not present in data")
+         abort(400)
 
     email = request.form["email"]
     if not validate_email(email):
-        print("ERROR: email invalid")
-        abort(400)
+         print("ERROR: email invalid")
+         abort(400)
 
     city = request.form['city']
 
@@ -58,7 +58,7 @@ def get_cities():
     with open(__root_path__.path() + "/data_store/top_city_list.json", "r") as cities:
         city_json = json.load(cities)
 
-    return str(city_json)
+    return jsonify(city_json)
 
 
 if __name__ == '__main__':

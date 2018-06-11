@@ -21,40 +21,56 @@
                 data: $("#subscribe").serialize(),
                 statusCode: {
                     200: function() {
-                        alert( "Success" );
+                        $("#msg").append('<div class="alert alert-success alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>SUCCESS</strong> ' + $("#email").val() + ' subscribed to ' + $("#city").val() + ' </div>');
                     },
                     400: function() {
-                        alert( "Bad Request" );
+                        $("#msg").append('<div class="alert alert-danger alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Did you provide valid info?</strong> Something wrong with the data.</div>');
                     },
                     500: function() {
-                        alert( "Server Error" );
+                        $("#msg").append('<div class="alert alert-danger alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Server isn\'t feeling well!</strong> Please try again in sometime.</div>');
                     }
                 }
             });
         });
+
+        $.get("/funday/getcities", function(obj) {
+            console.log(obj);
+            $.each(obj.cities, function(value) {
+                $("#city").append("<option>" + obj.cities[value] + "</option>");
+            });
+        });
+
     });
     </script>
 </head>
 <body>
 
 <div class="container">
+<div id="msg">
+
+</div>
+</div>
+
+<div class="container">
   <h2 style="color:#069">Fun Day Weather Email Service</h2>
-  <form id="subscribe">
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-    </div>
-    <div class="form-group">
-      <label for="city">City:</label>
-      <select class="form-control" id="city" name="city">
-      	<option>--SELECT--</option>
-        <option>Cambridge,MA</option>
-        <option>New York,NY</option>
-        <option>Chicago,IL</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-default">Subscribe</button>
-  </form>
+  <div id="subscribediv">
+      <form id="subscribe">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="city">City:</label>
+          <select class="form-control" id="city" name="city">
+            <option>--SELECT--</option>
+            <!--<option>Cambridge,MA</option>-->
+            <!--<option>New York,NY</option>-->
+            <!--<option>Chicago,IL</option>-->
+          </select>
+        </div>
+        <button type="submit" class="btn btn-default">Subscribe</button>
+      </form>
+  </div>
 </div>
 
 </body>
