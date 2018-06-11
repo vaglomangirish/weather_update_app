@@ -57,13 +57,12 @@
       <form id="subscribe">
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required />
         </div>
         <div class="form-group">
           <label for="city">City:</label>
-          <select class="form-control" id="city" name="city">
-            <option>--SELECT--</option>
-            <!--<option>Cambridge,MA</option>-->
+          <select class="form-control" id="city" name="city" required>
+            <option value="" disabled selected>Select City</option>
             <!--<option>New York,NY</option>-->
             <!--<option>Chicago,IL</option>-->
           </select>
