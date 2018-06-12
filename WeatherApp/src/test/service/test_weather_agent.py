@@ -24,16 +24,16 @@ class TestWeatherAgent:
         """
 
         agent = weather_agent.WeatherAgent()
-        # weather_json = agent.get_weather_by_city("Boston,MA")
+        weather_json = agent.get_weather_by_city("Boston,MA")
 
-        # assert weather_json["data"][0]["temp"] is not None
+        assert weather_json["data"][0]["temp"] is not None
 
     def test_get_avg_temp_for_city(self):
         """
-        Test to get averate temp.
+        Test to get average temp.
         """
 
         agent = weather_agent.WeatherAgent()
-        # avg_temp = agent.get_avg_temp_for_city("Seatle,WA")
+        avg_temp = agent.get_avg_temp_for_city("Seatle,WA")
 
-        # assert avg_temp is not None
+        assert avg_temp is not None

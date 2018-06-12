@@ -1,3 +1,5 @@
+import json
+
 from src.service import email_agent, email_content
 
 
@@ -37,8 +39,8 @@ class TestEmailAgent:
         content.set_html(html_content)
 
         agent = email_agent.EmailAgent()
-        #response = agent.send_email(content)
+        response = agent.send_email(content)
 
-        #resp_json = json.loads(response.content)
+        resp_json = json.loads(response.content)
 
-        #assert resp_json["success"] == True
+        assert resp_json["success"] == True
