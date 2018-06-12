@@ -27,7 +27,7 @@ class TestEmailAgent:
 
         from_id = "funday@weatherapp.com"
         from_name = "FunDay Weather App"
-        to_id = "vaglomangirish@gmail.com"
+        to_id = "dummy@email.com"
         subject = "Test Email"
         html_content = "<p>This is a test email.</p>"
 
