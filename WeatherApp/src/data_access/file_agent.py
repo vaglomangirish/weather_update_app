@@ -52,7 +52,7 @@ class FileAgent(storage_agent.StorageAgent):
         with open(self.data_store_path, "r") as json_store:
             # FIXME: Performance perspective try to use streams instead of loading whole json in memory every time.
             self.json_data = json.load(json_store)
-            self.logger.info("Loaded the current stored data xxx")
+            self.logger.info("Loaded the current stored data.")
 
         user_id = record.get_user_id()
         city = record.get_city()
